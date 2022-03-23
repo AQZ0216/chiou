@@ -1,0 +1,140 @@
+/*螢幕顯示時使用之格式字型大小以px為單位*/
+/*body格式設定*/
+
+body{
+	margin:0 0 0 0;		/*邊緣上下左右*/
+	font-family:'新細明體';		/*字形*/
+	font-size:14px; 			/*字體大小*/
+	/*background-color:'#d5d2d1'; /*背景顏色*/
+	/*background-image:url(../img/登入背景.jpg); /*背景圖案*/
+	/*background-attachment:fixed; /*背景圖案不隨畫面捲動*/
+	}
+/*連結LINK之反應*/
+A:link{color:red}		/*未連結之字體顏色*/
+A:visited{color:blue}	/*曾經連結之字體顏色*/
+A:active{color:orange}	/*連結之字體顏色*/
+/*標題文字*/
+.tit_text{	
+	font-family:'新細明體'; 	/*字形*/
+	font-size:14px; 		/*字體大小*/
+	color:'#1010ff';		/*字體顏色*/
+	font-weight:bold; 		/*字加粗*/
+	}
+
+/*外部表格table格式*/		
+.outer_table{	
+	margin:0 0 0 0;		/*邊緣上下左右*/
+	width:760px;		/*整個表格之寬度*/
+	border-color:'red'; /*表格外框顏色*/ 
+	border-style:solid;		/*表格外框線型*/
+	border-width:0px;		/*表格外框厚度*/  
+	border-collapse:collapse; 
+	/*background-image:url(../img/登入背景.jpg); /*背景圖案*/
+	}
+/*外部tr格式*/
+.outer_tr{
+	margin:0 0 0 0;		/*邊緣上下左右*/
+	/*height:20mm;		/*列高*/
+	/*border-style:solid;		/*表格外框線型*/ 
+	/*background-color:'yellow'; /*背景顏色*/ 
+	/*border-width:thin;		/*表格外框厚度*/ 
+	}
+/*外部td格式*/
+.outer_td{
+	font-size:14px; 	/*字體大小*/
+	/*width:40mm;		/*表格欄寬*/
+	margin-top:0 0 0 0;		/*邊緣上下左右*/
+	/*border-color:'red'; /*表格外框顏色*/ 
+	/*border-style:solid;		/*表格外框線型*/
+	/*border-width:1pt;		/*表格外框厚度*/  
+	/*background-color:'black'; /*背景顏色*/ 
+	/*background-image:url(../img/temp1.gif);  /*背景圖案*/
+ 	/*background-repeat:no-repeat; /*背景圖案不隨畫面捲動*/
+	/*background-attachment:fixed; /*背景圖案不隨畫面捲動*/
+	}
+/*內部表格table格式*/		
+table{	
+	margin:0 0 0 0;		/*邊緣上下左右*/
+	/*width:200mm;		/*整個表格之寬度*/
+	/*border-color:'blue'; /*表格外框顏色*/ 
+	/*border-style:solid;		/*表格外框線型*/
+	/*border-width:4px;		/*表格外框厚度*/  
+	/*background-color:'green'; /*背景顏色*/ 
+	/*border-collapse:seperate; 	/*邊框形式分離*/
+	border-collapse:collapse; 	/*邊框形式重合*/
+	}
+/*內部tr格式*/
+tr{
+	margin:0 0 0 0;		/*邊緣上下左右*/
+	/*height:20mm;		/*列高*/
+	/*background-color:'#ffffff'; /*背景顏色*/ 
+	}
+/*內部td格式*/
+td{
+	font-size:14px; 	/*字體大小*/
+	margin:0 0 0 0;		/*邊緣上下左右*/
+	border-color:'green'; /*表格外框顏色*/ 
+	border-style:solid;		/*表格外框線型*/
+	border-width:2px;		/*表格外框厚度*/  
+	/*background-color:''; /*背景顏色*/ 
+	/*background-image:url(../img/temp1.gif);  /*背景圖案*/ 
+	/*background-attachment:fixed; /*背景圖案不隨畫面捲動*/
+	/*text-align:center;	/*字體水平對齊方式*/
+	vertical-align:middle;	/*字體垂直對齊方式*/
+	}
+/*form格式*/
+form{
+	font-family:'新細明體'; 	/*字形*/
+	font-size:14px;				/*字體大小*/
+	}
+/*input格式*/
+input{
+	font-size:14px;				/*字體大小*/
+	margin:0mm;
+	background-color:'#fff'; /*背景顏色*/ 
+	}
+/*input之text格式*/		
+input.i_text1{
+	font-size:14px;				/*字體大小*/
+	cursor:hand;				/*游標形式*/ 
+	width:220px;					/*寬度*/
+	/*height:8mm;					/*高度*/
+	}
+input.i_text2{
+	font-size:14px;				/*字體大小*/
+	cursor:hand;				/*游標形式*/ 
+	width:520px;					/*寬度*/
+	/*height:8mm;					/*高度*/
+	}
+input.i_text3{
+	font-size:14px;				/*字體大小*/
+	cursor:hand;				/*游標形式*/ 
+	width:70px;					/*寬度*/
+	/*height:8mm;					/*高度*/
+	}
+input.i_text4{
+	font-size:14px;				/*字體大小*/
+	cursor:hand;				/*游標形式*/ 
+	width:390px;					/*寬度*/
+	/*height:8mm;					/*高度*/
+	}
+textarea.i_textarea1{
+	font-size:14px;				/*字體大小*/
+	cursor:hand;				/*游標形式*/ 
+	width:520px;					/*寬度*/
+	height:80px;					/*高度*/
+	}
+/*input之button格式*/	
+input.i_button{
+	font-size:14px;				/*字體大小*/
+	cursor:hand;				/*游標形式*/
+	/*width:20mm;					/*寬度*/
+	/*height:8mm;					/*高度*/
+	}
+input.tool_bar{
+	font-size:18px;				/*字體大小*/
+	cursor:hand;				/*游標形式*/
+	width:30mm;					/*寬度*/
+	height:8mm;					/*高度*/
+	background-color:'lightgrey'; 	/*背景顏色*/ 
+	}

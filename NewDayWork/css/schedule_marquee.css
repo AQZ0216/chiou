@@ -1,0 +1,63 @@
+.marquee {
+  width: 300px;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid red;
+  animation-play-state: paused;
+}
+.marquee span{
+	color:red;
+    display: inline-block;
+    width: max-content;
+    /*padding-left: 100%;*/
+  -webkit-animation: marquee 15s linear infinite;
+     -moz-animation: marquee 15s linear infinite;
+     -ms-animation: marquee 15s linear infinite;
+      -o-animation: marquee 15s linear infinite;
+        animation: marquee 15s linear infinite;
+}
+
+/* Make it move */
+
+@-webkit-keyframes marquee {
+    0%   { -webkit-transform: translate(0, 0); }
+    100% { -webkit-transform: translate(-100%, 0); }
+}
+
+@-moz-keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+@-ms-keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+@-o-keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* Standard syntax */
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+.marquee span:hover {
+    /*-webkit-animation-play-state: paused;
+       -moz-animation-play-state: paused;
+        -ms-animation-play-state: paused;
+         -o-animation-play-state: paused;
+            animation-play-state: paused;*/
+            animation-play-state: running;
+}
+
+ 
+
+
+

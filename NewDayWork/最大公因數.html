@@ -1,0 +1,254 @@
+
+<HTML>
+<HEAD>
+<Title>璸衡程そ计</Title>
+<META http-equiv="Content-Type" >
+<META name="Generator" >
+<style type="text/css"><!--
+body{font-family:'穝灿砰';background-color :'#F0FEE0'}
+input{
+   text-align:right;
+}
+--></style>
+</HEAD>
+<BODY>
+<center>
+<form id="form1" name="form1" method="post" action="" >
+<!--
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">璸衡程そ计</font>
+ <hr>
+俱计A<input type="text" name="pn" value="" style="width:80pt;" maxlength="8">=<input type="text" name="pn1" value="" style="width:80pt;" maxlength="8">
+<br>
+俱计B<input type="text" name="pm" value="" style="width:80pt;" maxlength="8">=<input type="text" name="pm1" value="" style="width:80pt;" maxlength="8">
+<hr>
+<input name="b03" value="璸衡" type="button" onclick="cal_gcd()"><br>
+程そ计=<input type="text" name="gcda" value="" style="width:80pt;" maxlength="8"><br>
+程そ计=<input type="text" name="lcma" value="" style="width:80pt;" maxlength="8"><br> -->
+<table border=0>
+<tr>
+<td colspan=4 align=center><font style="font-size:20px;font-weight:bold;letter-spacing:10px;">璸衡程そ计</font></td>
+</tr>
+<tr>
+<td>俱计A</td>
+<td><input type="text" name="pn" value="785" style="width:60pt;background-color:#FFFFBB;" maxlength="8" ></td>
+<td>=</td>
+<td>
+<input type="text" name="pn1" value="" style="width:40pt;background-color:#dddddd;" maxlength="8" readonly> x
+<input type="text" name="pn2" value="" style="width:40pt;background-color:#dddddd;" maxlength="8" readonly>
+</td>
+</tr>
+<td>俱计B</td>
+<td><input type="text" name="pm" value="55107" style="width:60pt;background-color:#FFFFBB;" maxlength="8"></td>
+<td>=</td>
+<td>
+<input type="text" name="pm1" value="" style="width:40pt;background-color:#dddddd;" maxlength="8" readonly> x
+<input type="text" name="pm2" value="" style="width:40pt;background-color:#dddddd;" maxlength="8" readonly>
+</td>
+</tr>
+</tr>
+<td rowspan=2>
+<input name="b03" value="璸衡" type="button" onclick="cal_gcd()" style="text-align:center;"><br>
+<input name="b04" value="睲埃" type="button" onclick="b4_clear()" style="text-align:center;">
+</td>
+<td align=right>程そ计</td>
+<td>=</td>
+<td><input type="text" name="gcda" value="" style="width:90pt;background-color:#E8CCFF;" maxlength="8" readonly></td>
+</tr>
+</tr>
+<td align=right>程そ计</td>
+<td>=</td>
+<td><input type="text" name="lcma" value="" style="width:90pt;background-color:#E8CCFF;" maxlength="16" readonly></td>
+</tr>
+</table>
+<hr color="red"  width=900>
+<table border=0>
+<tr>
+<td colspan=7 align=center>
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">だ计猭</font>
+<input name="bc" value="睲埃戈" type="button" onclick="bc_clear()" style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+だ<input type="text" name="p1u" value="" style="width:60pt;background-color:#FFFFBB;" maxlength="10" >
+<hr>
+だダ<input type="text" name="p1d" value="" style="width:60pt;background-color:#FFFFBB;" maxlength="10" >
+</td>
+<td style="text-align:center;">
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">&nbsp;</font>
+∠
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">&nbsp;</font>
+</td>
+<td style="text-align:center;">
+だ<input type="text" name="p2u" value="" style="width:60pt;background-color:#FFFFBB;" maxlength="10" >
+<hr>
+だダ<input type="text" name="p2d" value="" style="width:60pt;background-color:#FFFFBB;" maxlength="10" >
+</td>
+<td style="text-align:center;">
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">&nbsp;</font>
+<input name="bplus" value="∽" type="button" onclick="cal_plus()" style="text-align:center;width:60px;cursor:hand;">
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">&nbsp;</font>
+</td>
+<td style="text-align:center;">
+だ<input type="text" name="plusu" value="" style="width:90pt;background-color:#E8CCFF;" maxlength="20" readonly>
+<hr>
+だダ<input type="text" name="plusd" value="" style="width:90pt;background-color:#E8CCFF;" maxlength="20" readonly>
+</td>
+<td style="text-align:center;">
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">&nbsp;</font>
+<input name="rt" value="挡狦だ =>" type="button" onclick="rt_clear()" style="text-align:center;">
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">&nbsp;</font>
+</td>
+<td style="text-align:center;">
+だ
+<input type="text" name="rtu" value="" style="width:60pt;background-color:#E8CCFF;" maxlength="20" readonly>
+x
+<input type="text" name="rtu01" value="" style="width:60pt;background-color:#FFFFBB;" maxlength="20" readonly>
+<hr>
+だダ
+<input type="text" name="rtd" value="" style="width:60pt;background-color:#E8CCFF;" maxlength="10" readonly>
+x
+<input type="text" name="rtd01" value="" style="width:60pt;background-color:#FFFFBB;" maxlength="10" readonly>
+</td>
+</tr>
+<tr>
+<td colspan=7 align=center>
+<font style="font-size:18px;font-weight:bold;">猔種狦だダ硄だ计禬筁10计盢礚猭陪ボ挡狦</font>
+</td>
+</tr>
+</table>
+<hr color="red" width=900>
+</form>
+</center>
+<script language="VBScript">
+sub cal_gcd()
+	ppn=document.form1.pn.value
+	ppm=document.form1.pm.value
+	
+	if (isnumeric(ppn)=true and  isnumeric(ppm)=true) and not((cdbl(ppn)*cdbl(ppm))<=0) then
+	     if ppn<ppm then
+      	  kk=GCD(ppm,ppn)
+      	else
+      	  kk=GCD(ppn,ppm)
+      	end if
+          document.form1.pn.value = formatnumber(ppn,0)
+          document.form1.pm.value = formatnumber(ppm,0)
+          document.form1.gcda.value=formatnumber(kk,0)
+          document.form1.lcma.value=formatnumber(cdbl(ppm) * cdbl(ppn) / cdbl(kk),0)
+          document.form1.pn1.value = formatnumber(ppn/kk,0)
+          document.form1.pm1.value = formatnumber(ppm/kk,0)
+          document.form1.pn2.value = formatnumber(kk,0)
+          document.form1.pm2.value = formatnumber(kk,0)
+      else
+         bs=MsgBox ("岿粇叫块0ぇ俱计", 0+1, "岿粇")
+      end if
+end sub
+sub b4_clear()
+          document.form1.pn.value = "785"
+          document.form1.pm.value = "55107"
+          document.form1.gcda.value="0"
+          document.form1.lcma.value="0"
+          document.form1.pn1.value = "0"
+          document.form1.pm1.value ="0"
+          document.form1.pn2.value = "0"
+          document.form1.pm2.value = "0"
+end sub
+'―秆程そ计
+Function GCD(pm,pn)
+ km=cdbl(pm)
+ kn=cdbl(pn)
+'	if skm="Integer" and skn="Integer" then
+	 check=0
+	  do
+	    'k1= km mod kn
+	    if km=kn then
+	    	k1=0
+	    else
+	    	'z1=fix(km/kn)
+	    	k1=km-fix(km/kn)*kn
+	    end if
+	    if k1=0 then
+	        GCD=kn
+	        check=1
+	    else
+	        km=kn
+	        kn=k1
+	    end if
+	    sn=1+sn
+	   loop until check=1
+'	else
+'		GCD=1
+'	end if   
+End Function
+
+sub cal_plus()
+	pp1u=document.form1.p1u.value	'だ1
+	pp2u=document.form1.p2u.value	'だ2
+	pp1d=document.form1.p1d.value	'だダ1
+	pp2d=document.form1.p2d.value	'だダ2
+	'spp1d=typename(ccur(pp1d))
+  'spp2d=typename(ccur(pp2d))
+  	'document.form1.plusu.value=spp1d
+    'document.form1.plusd.value=spp2d
+
+	'璸衡程そ计
+	if (isnumeric(pp1d)=true and  isnumeric(pp2d)=true) and (not((cdbl(pp1d)*cdbl(pp2d))<=0)) then
+	     if cdbl(pp1d)<cdbl(pp2d) then
+      	  kk=GCD(pp2d,pp1d)
+      	else
+      	  kk=GCD(pp1d,pp2d)
+      	end if
+      	document.form1.rtu01.value=kk
+      	document.form1.rtd01.value=kk
+      	'だダ 程そ计
+      	pplcm=cdbl(pp1d) * cdbl(pp2d) / cdbl(kk)
+      	'だ
+      	pplusu=cdbl(pp1u)*(cdbl(pplcm)/cdbl(pp1d))+cdbl(pp2u)*(cdbl(pplcm)/cdbl(pp2d))
+      	if (len(pplcm)>10 or len(pplusu)>10) then
+      		document.form1.plusu.value="だダ┪だ禬筁10计"
+      		document.form1.plusd.value="だダ┪だ禬筁10计"
+      	else
+      		document.form1.plusu.value=formatnumber(pplusu,0)
+      		document.form1.plusd.value=formatnumber(pplcm,0)
+      		document.form1.rtu.value=formatnumber(pplusu,0)
+      		document.form1.rtd.value=formatnumber(pplcm,0)
+      	end if
+  else
+  	document.form1.plusu.value="岿粇"
+    document.form1.plusd.value="岿粇"
+  end if
+end sub
+sub bc_clear()
+          document.form1.p1u.value = ""
+          document.form1.p1d.value = ""
+          document.form1.p2u.value=""
+          document.form1.p2d.value=""
+          document.form1.plusu.value =""
+          document.form1.plusd.value =""
+          document.form1.rtu.value =""
+          document.form1.rtd.value =""
+end sub
+sub rt_clear()
+	pplusu=document.form1.plusu.value
+	pplusd=document.form1.plusd.value
+	
+	if (isnumeric(pplusu)=true and  isnumeric(pplusd)=true) and not((cdbl(pplusu)*cdbl(pplusd))<=0) then
+	     if pplusu<pplusd then
+      	  kk=GCD(pplusd,pplusu)
+      	else
+      	  kk=GCD(pplusu,pplusd)
+      	end if
+      document.form1.rtu.value = formatnumber(cdbl(pplusu)/cdbl(kk),0)
+      document.form1.rtd.value = formatnumber(cdbl(pplusd)/cdbl(kk),0)
+      document.form1.rtu01.value = formatnumber(cdbl(kk),0)
+      document.form1.rtd01.value = formatnumber(cdbl(kk),0)
+  else
+      document.form1.rtu.value = ""
+      document.form1.rtd.value = ""
+      document.form1.rtu01.value = ""
+      document.form1.rtd01.value = ""
+  end if
+end sub
+</script>
+</BODY>
+</HTML>

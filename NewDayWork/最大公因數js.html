@@ -1,0 +1,203 @@
+
+<HTML>
+<HEAD>
+<Title>璸衡程そ计</Title>
+<META http-equiv="Content-Type" >
+<META name="Generator" >
+<style type="text/css"><!--
+body{font-family:'穝灿砰';background-color :'#F0FEE0'}
+input{
+   text-align:right;
+}
+--></style>
+</HEAD>
+<BODY>
+<center>
+<form id="form1" name="form1" method="post" action="" >
+<!--
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">璸衡程そ计</font>
+ <hr>
+俱计A<input type="text" name="pn" value="" style="width:80pt;" maxlength="8">=<input type="text" name="pn1" value="" style="width:80pt;" maxlength="8">
+<br>
+俱计B<input type="text" name="pm" value="" style="width:80pt;" maxlength="8">=<input type="text" name="pm1" value="" style="width:80pt;" maxlength="8">
+<hr>
+<input name="b03" value="璸衡" type="button" onclick="cal_gcd()"><br>
+程そ计=<input type="text" name="gcda" value="" style="width:80pt;" maxlength="8"><br>
+程そ计=<input type="text" name="lcma" value="" style="width:80pt;" maxlength="8"><br> -->
+<table border=0>
+<tr>
+<td colspan=4 align=center><font style="font-size:20px;font-weight:bold;letter-spacing:10px;">璸衡程そ计</font></td>
+</tr>
+<tr>
+<td>俱计A</td>
+<td><input type="text" name="pn" id="pni" value="785" style="width:60pt;background-color:#FFFFBB;" maxlength="8" ></td>
+<td>=</td>
+<td>
+<input type="text" name="pn1" id="pn1i" value="" style="width:40pt;background-color:#dddddd;" maxlength="8" readonly> x
+<input type="text" name="pn2" id="pn2i" value="" style="width:40pt;background-color:#dddddd;" maxlength="8" readonly>
+</td>
+</tr>
+<td>俱计B</td>
+<td><input type="text" name="pm" id="pmi" value="55105" style="width:60pt;background-color:#FFFFBB;" maxlength="8"></td>
+<td>=</td>
+<td>
+<input type="text" name="pm1" id="pm1i" value="" style="width:40pt;background-color:#dddddd;" maxlength="8" readonly> x
+<input type="text" name="pm2" id="pm2i" value="" style="width:40pt;background-color:#dddddd;" maxlength="8" readonly>
+</td>
+</tr>
+</tr>
+<td rowspan=2>
+<input name="b03" value="璸衡" type="button" onclick="cal_gcd()" style="text-align:center;"><br>
+<input name="b04" value="睲埃" type="button" onclick="b4_clear()" style="text-align:center;">
+</td>
+<td align=right>程そ计</td>
+<td>=</td>
+<td><input type="text" name="gcda" id="gcdai" value="" style="width:90pt;background-color:#E8CCFF;" maxlength="8" readonly></td>
+</tr>
+</tr>
+<td align=right>程そ计</td>
+<td>=</td>
+<td><input type="text" name="lcma" id="lcmai" value="" style="width:90pt;background-color:#E8CCFF;" maxlength="16" readonly></td>
+</tr>
+</table>
+<hr color="red"  width=900>
+<table border=0>
+<tr>
+<td colspan=6 align=center>
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">だ计猭</font>
+<input name="bc" value="睲埃戈" type="button" onclick="bc_clear()" style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+だ<input type="text" name="p1u" id="p1ui" value="" style="width:60pt;background-color:#FFFFBB;" maxlength="10" >
+<hr>
+だダ<input type="text" name="p1d" id="p1di" value="" style="width:60pt;background-color:#FFFFBB;" maxlength="10" >
+</td>
+<td style="text-align:center;">
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">&nbsp;</font>
+∠
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">&nbsp;</font>
+</td>
+<td style="text-align:center;">
+だ<input type="text" name="p2u" id="p2ui"value="" style="width:60pt;background-color:#FFFFBB;" maxlength="10" >
+<hr>
+だダ<input type="text" name="p2d" id="p2di"value="" style="width:60pt;background-color:#FFFFBB;" maxlength="10" >
+</td>
+<td style="text-align:center;">
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">&nbsp;</font>
+<input name="bplus" value="∽" type="button" onclick="cal_plus()" style="text-align:center;width:60px;cursor:hand;">
+<font style="font-size:20px;font-weight:bold;letter-spacing:10px;">&nbsp;</font>
+</td>
+<td style="text-align:center;">
+だ<input type="text" name="plusu" id="plusui" value="" style="width:90pt;background-color:#E8CCFF;" maxlength="20" readonly>
+<hr>
+だダ<input type="text" name="plusd" id="plusdi" value="" style="width:90pt;background-color:#E8CCFF;" maxlength="20" readonly>
+</td>
+<td style="text-align:center;">
+<hr width=1>
+<input name="rt" value="挡狦だ =>" type="button" onclick="rt_clear()" style="text-align:center;">
+<hr width=1>
+</td>
+<td style="text-align:center;">
+だ<input type="text" name="rtu" id="rtui" value="" style="width:90pt;background-color:#E8CCFF;" maxlength="20" readonly>
+<hr>
+だダ<input type="text" name="rtd" id="rtdi" value="" style="width:90pt;background-color:#E8CCFF;" maxlength="20" readonly>
+</td>
+</tr>
+</table>
+<hr color="red" width=900>
+</form>
+</center>
+<script language="JavaScript">
+//function isNumerics(elem, helperMsg){
+function isNumerics(elem){
+	var numericExpression = /^[0-9]+$/;
+	if(elem.value.match(numericExpression)){
+		return true;
+	}else{
+		//alert(helperMsg);
+		//elem.focus();
+		return false;
+	}
+}
+//―秆程そ计
+function GCD(fpm,fpn){
+ var km=Number(fpm);
+ var kn=Number(fpn);
+ var check=0;
+// alert ("km="+km+"kn="+kn+"km%kn="+ (km % kn) );
+ while (check==0) {
+ 		k1 = km % kn;
+ 		if (k1==0){
+// 			alert ("kn="+kn);
+ 			return(kn);
+ 			check=1;
+ 		}else{
+// 			alert ("bkn="+kn+"bkm="+km);
+ 			km=kn;
+ 			kn=k1;
+// 			alert ("kn="+kn+"km="+km);
+ 		}
+	}
+
+}
+
+function cal_gcd(){
+//	var ppn=document.forms["form1"]["pn"].value;
+	var ppn=document.getElementById("pni").value;
+	var ppm=document.getElementById("pmi").value;
+//	alert (ppn+""+ppm);
+	nppn=Number(ppn)
+	nppm=Number(ppm)
+//	alert (nppn+""+nppm+""+(nppm*nppn));
+//	if (isNumerics(ppn) && isNumerics(ppm)) {
+	if (((typeof nppn)=="number") && ((typeof nppm)=="number") && (((nppn)*(nppm))>0)) {
+//		alert ("璸衡秨﹍");
+		if (nppn < nppm) {
+//			alert (nppn+"<"+nppm);
+			kk=GCD(nppm,nppn);
+		}else{
+//			alert (nppn+">="+nppm);
+			kk=GCD(nppn,nppm);
+		}
+//		document.forms["form1"]["pn"].value=ppn;
+//		document.forms["form1"]["pm"].value=ppm;
+//		document.forms["form1"]["gcda"].value=kk;
+//		document.forms["form1"]["lcma"].value=(ppm) * (ppn) / (kk);
+//		document.forms["form1"]["pn1"].value=ppn/kk;
+//		document.forms["form1"]["pm1"].value=ppm/kk;
+//		document.forms["form1"]["pn2"].value=kk;
+//		document.forms["form1"]["pm2"].value=kk;
+		document.getElementById("pni").value=nppn;
+		document.getElementById("pmi").value=nppm;
+		document.getElementById("gcdai").value=kk;
+		document.getElementById("lcmai").value=(nppm) * (nppn) / (kk);
+		document.getElementById("pn1i").value=nppn / kk;
+		document.getElementById("pm1i").value=nppm / kk;
+		document.getElementById("pn2i").value=kk;
+		document.getElementById("pm2i").value=kk;
+		//plcm=(nppm) * (nppn) / (kk);
+//		alert("gcd="+kk+"lcm="+plcm+"");
+		}else{
+		alert ("块岿粇");
+//		alert ("岿粇叫块0ぇ俱计");
+		}
+		return true;
+}
+function b4_clear(){
+//		document.forms["form1"]["pn"].value="785";
+//		document.forms["form1"]["pm"].value="55107";
+//		document.forms["form1"]["gcda"].value="0";
+//		document.forms["form1"]["lcma"].value="0";
+//		document.forms["form1"]["pn1"].value="0";
+//		document.forms["form1"]["pm1"].value="0";
+//		document.forms["form1"]["pn2"].value="0";
+//		document.forms["form1"]["pm2"].value="0";	
+//		return();
+}
+
+</script>
+
+</BODY>
+</HTML>

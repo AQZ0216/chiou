@@ -1,0 +1,34 @@
+body{font-family:'微軟正黑體';
+	font-weight:bold;
+	background-color:'#F0FFF0';
+	}
+input,select{font-family:'微軟正黑體';
+/*	font-weight:bold;*/
+	font-size:12.5pt;
+	cursor:hand;
+	}
+td{font-family:'微軟正黑體';
+/*	font-weight:bold;*/
+	font-size:12.5pt;
+	cursor:hand;
+	}
+.tit{font-family:'微軟正黑體';
+/*	font-weight:bold;*/
+	font-size:16pt;
+	color="blue";
+	}
+.bar{font-family:'微軟正黑體';
+/*	font-weight:bold;*/
+	font-size:10pt;
+	cursor:hand;
+	width:17.5mm;
+	height:8mm;
+	}
+.urlcmd{font-family:'微軟正黑體';
+/*	font-weight:bold;*/
+	font-size:12.5pt;
+	cursor:hand;
+	text-decoration:underline;
+	color:'#830742';
+	height:7.5mm;
+	}
