@@ -254,18 +254,18 @@
     <title>工作管理系統</title>
     <meta http-equiv="Content-Type" content="text/html; charset=big5">
     <link rel="icon" href="../daywork/img/khouse.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="stylesheet" href="./css/global.css" type="text/css">
     <style>
       body{
         font-family: "微軟正黑體";
         font-weight: bold;
-        background-color: #f0fff0;
+        background: #f0fff0;
 
         margin-top: 5px;
       }
 
       input, select, td{
-        font-family: "微軟正黑體";
-        font-size: 16.66px;
+        font: 16.66px "微軟正黑體";
         cursor: hand;
       }
 
@@ -285,14 +285,6 @@
         color: green;
       }
 
-      .center {
-        text-align: center;
-      }
-
-      .right {
-        text-align: right;
-      }
-
       .red {
         color: red;
       }
@@ -308,12 +300,11 @@
       .marquee {
         width: 800px;
         margin: auto;
-        background-color: #cff3c0;
+        background: #cff3c0;
         white-space: nowrap;
         overflow: hidden;
 
-        font-family: "微軟正黑體";
-        font-size: 32px;
+        font: 32px "微軟正黑體";
         letter-spacing: 7.5px;
       }
 
@@ -349,12 +340,11 @@
 
       .title {
         color: blue;
-        font-family: "微軟正黑體";
-        font-size: 21.33px;
+        font: 21.33px "微軟正黑體";
       }
 
       .header-link-primary {
-        background-color: #cccccc;
+        background: #ccc;
         color: red !important;
         text-decoration: none;
         font-size: 20px;
@@ -362,7 +352,7 @@
       }
 
       .header-link {
-        background-color: #dddddd;
+        background: #ddd;
         color: blue !important;
         text-decoration: none;
       }
@@ -374,15 +364,14 @@
       }
 
       .worker-table td {
-        padding: 0px;
+        padding: 0;
       }
 
       .btn {
         width: 66px;
         height: 30px;
-        background-color: #d3d3d3;
-        font-family: "微軟正黑體";
-	      font-size: 10pt;
+        background: #d3d3d3;
+        font: 10pt "微軟正黑體";
         cursor: hand;
       }
 
@@ -401,31 +390,31 @@
       }
 
       .a00 {
-        background-color: #ff79ff;
+        background: #ff79ff;
       }
       .a01 {
-        background-color: #ffcccc;
+        background: #fcc;
       }
       .a02 {
-        background-color: #ffddaa;
+        background: #fda;
       }
       .a03 {
-        background-color: #ffffbb;
+        background: #ffb;
       }
       .a04 {
-        background-color: #ccff99;
+        background: #cf9;
       }
       .a05 {
-        background-color: #bbffee;
+        background: #bfe;
       }
       .a06 {
-        background-color: #99ffff;
+        background: #9ff;
       }
       .a07 {
-        background-color: #ccccff;
+        background: #ccf;
       }
       .a08 {
-        background-color: #ffb3ff;
+        background: #ffb3ff;
       }
 
       .calendar {
@@ -436,12 +425,12 @@
       }
 
       .calendar-header1 {
-        background-color: #ffc080;
+        background: #ffc080;
         font-size: 16px;
       }
 
       .calendar-header2 {
-        background-color: #c0ffc0;
+        background: #c0ffc0;
         font-size: 14.66px;
       }
 
@@ -451,15 +440,15 @@
       }
 
       .today {
-        background-color: #ffc080;
+        background: #ffc080;
       }
 
       .weekend {
-        background-color: #ffc0c0;
+        background: #ffc0c0;
       }
 
       .normal {
-        background-color: #ffffff;
+        background: #fff;
       }
 
       .demo-img {
@@ -475,7 +464,7 @@
       }
 
       .url-table td {
-        padding: 0px;
+        padding: 0;
         border: 1px solid black;
       }
 
@@ -483,8 +472,7 @@
         height: 28px;
 
         color: #830742;
-        font-family: "微軟正黑體";
-        font-size: 16.66px;
+        font: 16.66px "微軟正黑體";
         text-decoration: underline;
         cursor: hand;
       }
@@ -493,8 +481,7 @@
         height: 28px;
 
         color: #830742;
-        font-family: "微軟正黑體";
-        font-size: 14.66px;
+        font: 14.66px "微軟正黑體";
         text-decoration: underline;
         cursor: hand;
       }
@@ -552,7 +539,7 @@
                 <%
                   for k = 0 to nCol-1
                     i = nCol*j + k
-                    if i >= worker_no then
+                    if i >= nWorker then
                 %>
                       <td class="center">
                         <input class="btn" type="button" title="<%=i%>">
