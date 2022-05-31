@@ -31,11 +31,6 @@
   ' 計算資料總數
   nWorker = rs.RecordCount
 
-
-  ' TODO: delete
-  worker_no = rs.RecordCount
-
-
   ' 重設陣列數目
   redim workerArr(Cint(nWorker))
   redim cWorkerArr(Cint(nWorker))
@@ -47,13 +42,13 @@
 
   rs.MoveFirst
   for i = 0 to nWorker-1
-    workerArr(i) = rs.Fields.Item("worker")   ' 中文名
-    cWorkerArr(i) = rs.Fields.Item("wkr_name") ' 全中文名
-    eWorkerArr(i) = rs.Fields.Item("e_name")   ' 英文名
-    staffArr(i) = rs.Fields.Item("e_name")    ' 暱稱
-    staffIdArr(i) = rs.Fields.Item("wkr_id")  ' id
-    staffDpArr(i) = rs.Fields.Item("wk_gp")   ' 部門
-    staffGpArr(i) = rs.Fields.Item("wk_sgp")  ' 群組
+    workerArr(i) = rs.Fields.Item("worker")     ' 中文名
+    cWorkerArr(i) = rs.Fields.Item("wkr_name")  ' 全中文名
+    eWorkerArr(i) = rs.Fields.Item("e_name")    ' 英文名
+    staffArr(i) = rs.Fields.Item("e_name")      ' 暱稱
+    staffIdArr(i) = rs.Fields.Item("wkr_id")    ' id
+    staffDpArr(i) = rs.Fields.Item("wk_gp")     ' 部門
+    staffGpArr(i) = rs.Fields.Item("wk_sgp")    ' 群組
 
     ' 移到下一筆記錄
     rs.MoveNext
@@ -80,11 +75,11 @@
   dp09Str = ""  ' 社企基金會
   dp10Str = ""  ' 我家農業
 
-  dpA1Str="" ' 業1
-  dpA2Str="" ' 業2
-  dpA3Str="" ' 業3
-  dpA4Str="" ' 業4
-  dpA5Str="" ' 業5
+  dpA1Str = ""  ' 業1
+  dpA2Str = ""  ' 業2
+  dpA3Str = ""  ' 業3
+  dpA4Str = ""  ' 業4
+  dpA5Str = ""  ' 業5
 
   for i = 1 to nWorker-1
     if InStr(1, staffDpArr(i), "總經理室", 1) > 0 then
@@ -195,7 +190,7 @@
 %>
 
 <%
-  '設定Session變數消滅時間
+  ' 設定Session變數消滅時間
   worker = Session("worker")
 %>
 
