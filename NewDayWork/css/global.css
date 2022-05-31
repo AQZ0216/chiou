@@ -5,3 +5,11 @@
 .right {
   text-align: right;
 }
+
+.noPadding {
+  padding: 0;
+}
+
+.noBorder {
+  border: 0;
+}

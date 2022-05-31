@@ -89,7 +89,7 @@
   </head>
 
   <body>
-    <iframe class="title-frame" src="work_title.asp?worker=<%=worker%>" width="100%" height="85"></iframe>
-    <iframe class="main-frame" src="wk_Calendar_all.asp?worker=worker" width="100%"></iframe>
+    <iframe class="title-frame" src="./work_title.asp?worker=<%=worker%>" width="100%" height="85"></iframe>
+    <iframe class="main-frame" src="./wk_Calendar_all.asp?worker=worker" width="100%"></iframe>
   </body>
 </html>

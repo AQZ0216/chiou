@@ -257,14 +257,15 @@
     <link rel="stylesheet" href="./css/global.css" type="text/css">
     <style>
       body{
+        background: #f0fff0;
         font-family: "微軟正黑體";
         font-weight: bold;
-        background: #f0fff0;
+        
 
         margin-top: 5px;
       }
 
-      input, select, td{
+      input, td{
         font: 16.66px "微軟正黑體";
         cursor: hand;
       }
@@ -672,14 +673,15 @@
 
               if linkRow <> prevRow then
                 if linkRow <> 1 then Response.Write("</tr>")
-                Response.Write("<tr class='center' style='height:20pt;'>")
+                
+                Response.Write("<tr class='center'>")
                 prevRow = linkRow
               end if
 
-              linkClass = "url-medium"
               if linkItem = "" or IsNull(linkItem) then
                 Response.Write("<td>&nbsp;</td>")
               else
+                linkClass = "url-medium"
                 if Len(linkItem) > 7 then
                   linkClass = "url-small"
                 end if
